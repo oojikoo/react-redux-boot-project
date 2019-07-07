@@ -30,7 +30,7 @@
   "include": [
     // "src/**/*.ts",
     // "src/**/*.tsx",
-    "./src/**/*"
+    "./src/**/*", "@types/typings.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -42,6 +42,6 @@
   ],
   "typeRoots": [
     "./node_modules/@types",
-    "./src/types"
+    "./@types"
   ],
 }

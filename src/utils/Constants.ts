@@ -1,4 +1,4 @@
-const STATUS_CODE = {
+export const STATUS_CODE = {
     ERROR: 500, // 500
     NOT_FOUND: 404, // 404
     NO_CONTENT: 204, // 204
@@ -8,6 +8,4 @@ const STATUS_CODE = {
     UNAUTHORIZED: 401, // 401
 };
 
-export {
-    STATUS_CODE as statusCode,
-};
+export const SILENCE_TIME = 30;

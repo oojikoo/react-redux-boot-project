@@ -35,7 +35,7 @@ module.exports = {
       "exports": "only-multiline",
       "functions": "only-multiline",
     }],
-    "arrow-parens": ["error", "always"],
+    // "arrow-parens": ["error", "always"],
     "space-before-function-paren": ["error", "never"],
     "standard/object-curly-even-spacing": 0,
     "no-new-object": "error",

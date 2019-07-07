@@ -4,16 +4,25 @@
   "description": "react-project-template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc && NODE_ENV=development webpack-dev-server -d --hot --host 0.0.0.0 --config webpack.config.js --watch",
+    "tsc": "tsc",
+    "test": "jest",
+    "production": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
+    "deploy:staging": "aws s3 sync --acl public-read --profile atlas_ryan --delete dist/ s3://app-name-staging",
+    "deploy:s3": "aws s3 sync --acl public-read --profile atlas_ryan --delete dist/ s3://app-name-production",
+    "deploy:invalidate": "aws cloudfront --profile atlas_ryan create-invalidation --distribution-id ${CLOUDFRONT_ID} --paths '/*'",
+    "lint": "eslint src/**/*.js src/**/*.jsx src/**/*.ts src/**/*.tsx"
   },
   "author": "Ryan Kim <oojikoo@gmail.com> (https://github.com/oojikoo)",
   "license": "UNLICENSED",
   "dependencies": {
     "@rebass/grid": "6.0.0",
     "axios": "0.19.0",
+    "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-router-dom": "5.0.1",
-    "styled-components": "4.3.2"
+    "styled-components": "4.3.2",
+    "styled-reset": "2.0.16"
   },
   "devDependencies": {
     "@babel/cli": "7.5.0",
@@ -64,6 +73,12 @@
     "react-test-renderer": "16.8.6",
     "script-loader": "0.7.2",
     "style-loader": "0.23.1",
+    "stylelint": "10.1.0",
+    "stylelint-config-recommended": "2.2.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-order": "3.0.0",
+    "stylelint-processor-styled-components": "1.8.0",
+    "stylelint-scss": "3.9.0",
     "ts-jest": "24.0.2",
     "ts-loader": "6.0.4",
     "tslib": "1.10.0",

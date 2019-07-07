@@ -1,11 +1,5 @@
 # React Project Template
 
-### packages in use
-
-- 
-
-
-
 ### Project Structure
 
 ```
@@ -16,6 +10,7 @@
 /assets --- all assets images, videos, audios ...
 /src --- source directory
   App.tsx
+  theme.ts
   /pages -- page root component based Routes, all page starts from here.
      Home/ --- folder style
        index.ts

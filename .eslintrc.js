@@ -17,7 +17,7 @@ module.exports = {
     "browser": true
   },
   "rules": {
-    "indent": ["error", 2],
+    "indent": ["error", 4],
     "react/prop-types": 0,
     "@typescript-eslint/explicit-function-return-type": "off",
     "react-hooks/rules-of-hooks": "warn",

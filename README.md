@@ -1,5 +1,48 @@
 # React Project Template
 
+react project template
+
+
+
+Create envs
+
+
+
+## How to get Started
+
+1. copy `.env` `.env.production` files into project root from **1Password**.  search `.env - Project name` or create a new ones
+2. install packages
+
+```
+$ npm install 
+```
+
+
+
+3. start 
+
+```
+$ npm run dev
+```
+
+
+
+## how to build 
+
+Required 1, 2 step from How to get started
+
+1. build 
+
+```
+$ npm run build
+```
+
+
+
+
+
+
+
 ### Project Structure
 
 ```

@@ -5,7 +5,7 @@
 //     return phoneNumber.format("INTERNATIONAL");
 // };
 
-const formatDuration = (secs, symbol:boolean = true, lang:string = 'en', zeroLeading:boolean = true) => {
+export const formatDuration = (secs, symbol:boolean = true, lang:string = 'en', zeroLeading:boolean = true) => {
     const secNum = parseInt(secs, 10); // don't forget the second param
     let hours:string|number = Math.floor(secNum / 3600);
     let minutes:string|number = Math.floor((secNum - hours * 3600) / 60);
@@ -64,31 +64,31 @@ const formatDuration = (secs, symbol:boolean = true, lang:string = 'en', zeroLea
     }
 };
 
-const getStorage = (key: string) => {
+export const getStorage = (key: string) => {
     return localStorage.getItem(key);
 };
 
-const setStorage = (key: string, value: string) => {
+export const setStorage = (key: string, value: string) => {
     return localStorage.setItem(key, value);
 };
 
-const destroyStorage = (key: string) => {
+export const destroyStorage = (key: string) => {
     return localStorage.removeItem(key);
 };
 
-const getSessionStorage = (key: string) => {
+export const getSessionStorage = (key: string) => {
     return sessionStorage.getItem(key);
 };
 
-const setSessionStorage = (key: string, value: string) => {
+export const setSessionStorage = (key: string, value: string) => {
     return sessionStorage.setItem(key, value);
 };
 
-const destroySessionStorage = (key: string) => {
+export const destroySessionStorage = (key: string) => {
     return sessionStorage.removeItem(key);
 };
 
-const checkImageExists = (url: string, callback: (val: boolean) => void) => {
+export const checkImageExists = (url: string, callback: (val: boolean) => void) => {
     const img = new Image();
     img.onload = function() {
         callback(true);
@@ -99,16 +99,7 @@ const checkImageExists = (url: string, callback: (val: boolean) => void) => {
     img.src = url;
 };
 
-export {
-    getStorage,
-    setStorage,
-    destroyStorage,
-    getSessionStorage,
-    setSessionStorage,
-    destroySessionStorage,
-    checkImageExists,
-    formatDuration,
-    // getFormattedNumber
-};
-
-
+export const formattedSeconds = (sec) =>
+    Math.floor(sec / 60) +
+    ':' +
+  ('0' + sec % 60).slice(-2);

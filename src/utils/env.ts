@@ -1,18 +1,17 @@
 import * as dotenv from "dotenv";
+import { resolve } from "path";
 
+// dotenv.config();
 dotenv.config({
     path:
         process.env.NODE_ENV === 'production'
-            ? '.env.production'
+            ? resolve(__dirname, "../../.env.production")
             : process.env.NODE_ENV === 'staging'
-                ? '.env.staging'
-                : '.env',
+                ? resolve(__dirname, "../../.env.staging")
+                : resolve(__dirname, "../../.env")
 });
 
-const {
-    BASE_URL,
-} = process.env;
 
-export default {
-    BASE_URL
-};
+export const ZEROTH_APPID = process.env.ZEROTH_APPID;
+export const ZEROTH_APPSECRET = process.env.ZEROTH_APPSECRET;
+

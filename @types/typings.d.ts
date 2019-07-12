@@ -23,8 +23,6 @@ import 'styled-components';
   declare global {
       namespace NodeJS {
           interface ProcessEnv {
-              ZEROTH_APPID: string;
-              ZEROTH_APPSECRET: string;
               NODE_ENV: 'development' | 'production' | 'staging';
           }
       }

@@ -12,6 +12,5 @@ dotenv.config({
 });
 
 
-export const ZEROTH_APPID = process.env.ZEROTH_APPID;
-export const ZEROTH_APPSECRET = process.env.ZEROTH_APPSECRET;
+export const NODE_ENV = process.env.NODE_ENV;
 

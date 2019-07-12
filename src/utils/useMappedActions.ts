@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { mapValues } from "lodash";
+import mapValues from "lodash/mapValues";
 import { useDispatch } from "redux-react-hook";
 
 export function useMappedActions<T>(actionsObj: T): T {
